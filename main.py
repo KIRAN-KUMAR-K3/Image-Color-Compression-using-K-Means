@@ -4,7 +4,7 @@ from PIL import Image
 from sklearn.cluster import KMeans
 
 # Load the image using PIL
-image_path = '<your_file_path_of_image'
+image_path = '<path_of_the_image>'
 image = Image.open(image_path)
 
 # Convert the image to RGB if it's not already in that mode

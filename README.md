@@ -2,7 +2,7 @@
 # Image Color Compression using K-Means
 
 <p align="center">
-  <img src="images/1.png" alt="Color Compression">
+  <img src="images/6.png" alt="Color Compression" width="300">
 </p>
 
 This project demonstrates color compression of images using the K-Means clustering algorithm. The main script `main.py` allows you to select an image file, specify the number of colors for compression, and saves the compressed image to an `outputs` directory.
@@ -50,7 +50,7 @@ This project demonstrates color compression of images using the K-Means clusteri
 
 ## Example
 
-![Original and Compressed Image](images/4.png)
+![Original and Compressed Image](images/comparision.png)
 
 ## License
 

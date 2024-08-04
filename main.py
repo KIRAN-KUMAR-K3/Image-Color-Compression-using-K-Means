@@ -57,15 +57,17 @@ def save_compressed_image(compressed_image):
     file_path = filedialog.asksaveasfilename(
         title="Save Compressed Image",
         initialdir=output_dir,
-        defaultextension=".png",
-        filetypes=[("PNG Image", "*.png")]
+        defaultextension=".jpg",
+        filetypes=[("JPEG Image", "*.jpg")]
     )
 
     if file_path:
-        compressed_image.save(file_path)
+        compressed_image.save(file_path, format='JPEG', quality=40)  # Adjust quality as needed
         print(f"Compressed image saved as: {file_path}")
+        return file_path
     else:
         print("No file selected for saving. The compressed image was not saved.")
+        return None
 
 def main():
     """Main function to execute the image compression and display results."""
@@ -91,7 +93,12 @@ def main():
     display_images(image, compressed_image, n_colors)
 
     # Save the compressed image
-    save_compressed_image(compressed_image)
+    compressed_file_path = save_compressed_image(compressed_image)
+
+    # Display compressed image size if saved
+    if compressed_file_path:
+        compressed_size = os.path.getsize(compressed_file_path)
+        print(f"Compressed file size: {compressed_size} bytes")
 
 if __name__ == "__main__":
     main()

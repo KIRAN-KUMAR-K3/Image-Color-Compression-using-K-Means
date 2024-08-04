@@ -1,5 +1,4 @@
 
-
 # Image Color Compression using K-Means
 
 <p align="center">
